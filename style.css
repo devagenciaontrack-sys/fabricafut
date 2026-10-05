@@ -257,11 +257,6 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 /* seção do app */
 .app-text{ color:var(--muted); font-size:18px; max-width:32ch; margin:18px 0 26px; }
 @media (max-width:959px){ .app-btn{ width:100%; } }
-.phones{ position:relative; width:330px; max-width:100%; aspect-ratio:330 / 560; }
-.phones .screen{ position:absolute; width:62%; }
-.screen-back{ left:0; top:4%; transform:rotate(-7deg); opacity:.95; }
-.screen-back img{ object-position:bottom; }
-.screen-front{ right:0; top:0; transform:rotate(3deg); z-index:1; }
 .app-visual .notes{ position:relative; z-index:2; }
 
 /* legendas da jornada */
