@@ -221,3 +221,52 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
   html{ scroll-behavior:auto; }
   *, *::before, *::after{ animation:none !important; transition:none !important; }
 }
+
+/* ---------- complementos ---------- */
+
+/* faixa de categorias no topo */
+.index{ position:relative; z-index:1; display:flex; flex-wrap:wrap; align-items:center; gap:10px 12px; margin-top:34px; padding-top:22px; border-top:1px solid var(--line); }
+.index-label{ font-family:var(--title); font-weight:800; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-right:6px; }
+.index a{ text-decoration:none; font-family:var(--title); font-weight:700; font-size:14px; padding:8px 16px; border:1px solid var(--coal); border-radius:999px; transition:background .15s, color .15s; }
+.index a:hover{ background:var(--coal); color:var(--paper); }
+.index a:first-of-type{ background:var(--orange); border-color:var(--orange); color:var(--white); }
+@media (min-width:960px){ .index{ margin-top:56px; } }
+
+/* desenhos dos blocos do catálogo */
+.cat-art-sm{ right:-18px; top:18px; width:46%; max-width:190px; aspect-ratio:6 / 5; }
+.cat-b .cat-art-sm{ stroke:rgba(36,39,43,.35); }
+.cat-c .cat-art-sm{ stroke:rgba(250,248,243,.35); }
+.cat-art-loop{ right:24px; top:50%; width:72px; height:60px; transform:translateY(-50%); stroke:var(--blue); stroke-width:2.4; opacity:.5; }
+.cat:hover .cat-art-sm{ transform:rotate(-6deg); }
+@media (max-width:759px){ .cat-art-loop{ top:22px; transform:none; } }
+
+/* botão no fim de "consultar" */
+.consult-cta{ grid-column:1 / -1; padding-top:30px; }
+@media (max-width:959px){ .consult-cta .btn{ width:100%; } }
+
+/* faixa editorial */
+.quote{ background:var(--sand); padding-block:72px; position:relative; overflow:hidden; }
+@media (min-width:960px){ .quote{ padding-block:110px; } }
+.quote-in{ position:relative; max-width:1000px; }
+.quote-mark{ position:absolute; left:8px; top:-60px; font-family:var(--title); font-weight:800; font-size:220px; line-height:1; color:var(--orange); opacity:.9; }
+.quote-text{ position:relative; font-family:var(--title); font-weight:800; font-size:clamp(34px, 6.4vw, 78px); line-height:1.02; letter-spacing:-.04em; padding-top:70px; text-wrap:balance; }
+.quote-text em{ font-style:normal; color:var(--orange); }
+.quote-by{ margin-top:26px; padding-top:16px; border-top:1px solid var(--coal); display:inline-block; font-family:var(--title); font-weight:800; font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
+@media (min-width:960px){ .quote-mark{ left:-20px; top:-80px; font-size:300px; } .quote-text{ padding-top:40px; padding-left:90px; } .quote-by{ margin-left:90px; } }
+
+/* seção do app */
+.app-text{ color:var(--muted); font-size:18px; max-width:32ch; margin:18px 0 26px; }
+@media (max-width:959px){ .app-btn{ width:100%; } }
+.phones{ position:relative; width:330px; max-width:100%; aspect-ratio:330 / 560; }
+.phones .screen{ position:absolute; width:62%; }
+.screen-back{ left:0; top:4%; transform:rotate(-7deg); opacity:.95; }
+.screen-back img{ object-position:bottom; }
+.screen-front{ right:0; top:0; transform:rotate(3deg); z-index:1; }
+.app-visual .notes{ position:relative; z-index:2; }
+
+/* legendas da jornada */
+.path li b{ display:block; font-weight:800; }
+.path li span{ display:block; font-family:var(--body); font-weight:400; font-size:15px; letter-spacing:0; color:var(--muted); margin-top:4px; max-width:24ch; }
+.path li::before{ top:30px; }
+@media (min-width:960px){ .path li::before{ top:0; } .path li span{ font-size:14.5px; } }
+@media (min-width:760px){ .cat-art-loop{ right:170px; } }
