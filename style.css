@@ -166,9 +166,7 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 /* 03 — os três verbos em tipografia grande, em escada (sem caixas nem linhas) */
 .consult{ background:var(--white); border-block:1px solid var(--line); }
 .consult-grid{ display:grid; gap:40px; }
-.consult-head{ display:flex; flex-direction:column; gap:28px; }
-@media (min-width:900px){ .consult-grid{ gap:56px; } .consult-head{ flex-direction:row; align-items:flex-end; justify-content:space-between; } .consult-title{ max-width:18ch; } }
-.consult-title{ max-width:14ch; }
+.sr-only{ position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
 .consult-cols{ display:grid; gap:14px; }
 .col{ display:flex; flex-wrap:wrap; align-items:flex-end; column-gap:28px; row-gap:10px; }
 .col:nth-child(2){ padding-left:9%; }
@@ -279,8 +277,6 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 @media (min-width:960px){ .index{ margin-top:56px; } }
 
 /* botão no fim de "consultar" */
-.consult-cta{ display:flex; }
-@media (max-width:699px){ .consult-cta .btn{ width:100%; } }
 
 /* faixa editorial */
 .quote{ background:var(--sand); padding-block:48px; border-block:1px solid var(--line); }
