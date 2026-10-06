@@ -300,3 +300,50 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 .path li span{ display:block; font-family:var(--body); font-weight:400; font-size:15px; letter-spacing:0; color:var(--muted); margin-top:4px; max-width:24ch; }
 .path li::before{ top:30px; }
 @media (min-width:960px){ .path li::before{ top:0; } .path li span{ font-size:14.5px; } }
+
+/* ---------- toque humano (v9): papel, lápis, fotos reais ---------- */
+:root{ --hand:'Caveat', 'Segoe Print', cursive; --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+body::after{ content:""; position:fixed; inset:0; z-index:200; pointer-events:none; background-image:var(--grain); opacity:.06; mix-blend-mode:multiply; }
+.pencil{ font-family:var(--hand); font-weight:600; color:var(--blue); line-height:1.1; letter-spacing:0; text-transform:none; }
+
+/* hero */
+.hero{ padding-bottom:72px; }
+@media (min-width:960px){ .hero{ padding-bottom:110px; } }
+.hero-video .video{ transform:rotate(1.2deg); }
+.hero-note{ position:absolute; left:-118px; top:34%; display:flex; flex-direction:column; align-items:flex-end; font-size:26px; transform:rotate(-6deg); }
+.hero-note svg{ width:84px; height:48px; fill:none; stroke:currentColor; stroke-width:2.4; stroke-linecap:round; margin-top:2px; transform:rotate(-8deg); }
+@media (max-width:959px){ .hero-note{ display:none; } }
+
+/* catálogo */
+.cat-head{ display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:12px 32px; }
+.cat-hint{ font-size:24px; transform:rotate(-2deg); max-width:16ch; }
+.cat{ justify-content:flex-end; }
+.prints{ position:absolute; z-index:-1; right:8%; top:9%; width:min(58%, 300px); aspect-ratio:1 / 1.05; }
+.print{ position:absolute; width:62%; height:auto; aspect-ratio:auto; object-fit:cover; background:#fff; padding:8px 8px 26px; box-shadow:0 22px 34px -20px rgba(0,0,0,.45); transition:transform .45s cubic-bezier(.2,.8,.2,1); }
+.print-1{ left:0; top:10%; transform:rotate(-7deg); }
+.print-2{ right:0; top:0; transform:rotate(5deg); }
+.cat-a:hover .print-1{ transform:rotate(-10deg) translateX(-6px); }
+.cat-a:hover .print-2{ transform:rotate(8deg) translateY(-6px); }
+.print-note{ position:absolute; z-index:2; left:-64%; top:50%; color:var(--white); font-size:25px; transform:rotate(-4deg); }
+@media (max-width:759px){ .prints{ top:7%; right:6%; width:66%; } .cat-a{ min-height:380px; } .print-note{ display:none; } }
+.cat-foot{ position:relative; z-index:1; }
+
+/* verbos: círculo feito à mão */
+.ringed{ position:relative; display:inline-block; }
+.ringed svg{ position:absolute; left:-8%; top:-14%; width:116%; height:132%; fill:none; stroke:var(--coal); stroke-width:2.2; stroke-linecap:round; overflow:visible; pointer-events:none; }
+
+/* app: anotações a lápis */
+.notes li{ font-family:var(--hand); font-weight:600; font-size:26px; letter-spacing:0; text-transform:lowercase; color:var(--blue); border-color:var(--blue); }
+@media (min-width:640px){
+  .notes li::after, .notes li::before{ border-top:0 !important; height:14px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 14' preserveAspectRatio='none'%3E%3Cpath d='M2 9c14-5 34-7 56-3' fill='none' stroke='%23406D96' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat; top:40% !important; }
+  .notes-left li:nth-child(2){ transform:rotate(-4deg); }
+  .notes-right li:first-child{ transform:rotate(3deg); }
+  .notes-left li:first-child, .notes-right li:last-child{ color:var(--orange); }
+}
+
+/* jornada: foto da campanha */
+.journey-side{ display:flex; flex-direction:column; gap:36px; }
+.snap{ margin:0; width:210px; background:#fff; padding:9px 9px 0; transform:rotate(-3deg); box-shadow:0 26px 40px -26px rgba(36,39,43,.55); }
+.snap img{ width:100%; height:auto; aspect-ratio:4 / 5; object-fit:cover; object-position:center 30%; }
+.snap figcaption{ padding:8px 2px 12px; font-size:20px; color:var(--coal); text-align:center; }
+@media (max-width:959px){ .snap{ width:180px; align-self:flex-end; margin-top:-80px; } }

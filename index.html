@@ -9,11 +9,12 @@
 <meta property="og:title" content="Fábrica Fut — Comprar em atacado pode ser mais simples">
 <meta property="og:description" content="O catálogo de atacado no seu celular.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/video-capa.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F05A28'/%3E%3Cpath d='M20 46V18h24M20 32h18' fill='none' stroke='%23FAF8F3' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Manrope:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -28,6 +29,9 @@
     <symbol id="i-tag" viewBox="0 0 120 100"><path d="M64 10h40v40L58 96 18 56Z"/><circle cx="88" cy="26" r="6"/></symbol>
     <symbol id="i-loop" viewBox="0 0 120 100"><path d="M92 38A36 36 0 1 0 96 62"/><path d="M96 20v20H76"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="h-arrow" viewBox="0 0 120 70"><path d="M6 10c22 2 52 8 74 26 9 7 15 14 20 24"/><path d="M84 56c6 2 11 3 17 5 1-6 1-12 0-18"/></symbol>
+    <symbol id="h-ring" viewBox="0 0 300 110" preserveAspectRatio="none"><path d="M40 20C110 2 250 4 286 40c22 30-40 60-130 64C70 108 6 88 12 56 18 30 70 14 150 10"/></symbol>
+    <symbol id="h-tick" viewBox="0 0 60 20" preserveAspectRatio="none"><path d="M2 14c18-6 36-9 56-8"/></symbol>
   </defs>
 </svg>
 
@@ -60,11 +64,12 @@
         <span class="sticker" aria-hidden="true">Campanha</span>
         <div class="video" data-video-id="NsGeB67Gk3M" data-track-play="fabrica_video_play">
           <button type="button" class="video-poster" aria-label="Assistir ao vídeo: Comprar em atacado">
-            <img src="https://i.ytimg.com/vi/NsGeB67Gk3M/hqdefault.jpg" alt="" width="480" height="360" decoding="async">
+            <img src="assets/video-capa.jpg" alt="" width="720" height="1280" decoding="async" fetchpriority="high">
             <span class="play" aria-hidden="true">Assistir</span>
           </button>
         </div>
         <figcaption><span>Vídeo</span>Comprar em atacado</figcaption>
+        <p class="pencil hero-note" aria-hidden="true">dá o play<svg><use href="#h-arrow"/></svg></p>
       </figure>
 
       <div class="hero-body">
@@ -73,45 +78,36 @@
         <p class="micro">Acesso pelo celular.</p>
       </div>
     </div>
-    <div class="wrap">
-      <nav class="index" aria-label="Categorias do catálogo">
-        <span class="index-label">No catálogo</span>
-        <a href="#catalogo">Novidades</a>
-        <a href="#catalogo">Modelos disponíveis</a>
-        <a href="#catalogo">Oportunidades</a>
-        <a href="#catalogo">Reposições</a>
-      </nav>
-    </div>
-    <p class="hero-word" aria-hidden="true">atacado</p>
   </section>
 
   <!-- SEÇÃO 02 – CATÁLOGO -->
   <section class="catalog" id="catalogo">
     <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Catálogo</p>
+      <div class="sec-head cat-head">
         <h2>Escolha com os olhos.<br>Decida com informação.</h2>
+        <p class="pencil cat-hint" aria-hidden="true">toque numa categoria e abre no app</p>
       </div>
       <!-- Categorias conceituais. Quando o cliente enviar fotos reais de produto, elas podem entrar como fundo de cada bloco. -->
       <div class="cat-grid">
         <a class="cat cat-a" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="catalogo_novidades">
-          <span class="cat-label">01 / 04</span>
-          <span class="art-stack" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="prints" aria-hidden="true">
+            <img class="print print-1" src="assets/produto-1.jpg" alt="" width="320" height="320" loading="lazy" decoding="async">
+            <img class="print print-2" src="assets/produto-2.jpg" alt="" width="320" height="288" loading="lazy" decoding="async">
+            <span class="pencil print-note">lançamentos do app</span>
+          </span>
           <span class="cat-foot"><span class="cat-name">NOVIDADES</span><span class="cat-go"><span class="cat-go-t">Ver no app</span><span class="cat-go-ic"><svg class="ic"><use href="#i-arrow"/></svg></span></span></span>
         </a>
         <a class="cat cat-b" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="catalogo_modelos">
-          <span class="cat-label">02 / 04</span>
           <span class="art-swatch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
           <span class="cat-foot"><span class="cat-name">MODELOS<br>DISPONÍVEIS</span><span class="cat-go"><span class="cat-go-t">Ver no app</span><span class="cat-go-ic"><svg class="ic"><use href="#i-arrow"/></svg></span></span></span>
         </a>
         <a class="cat cat-c" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="catalogo_oportunidades">
-          <span class="cat-label">03 / 04</span>
           <span class="art-tag" aria-hidden="true"></span>
           <span class="cat-foot"><span class="cat-name">OPORTUNIDADES</span><span class="cat-go"><span class="cat-go-t">Ver no app</span><span class="cat-go-ic"><svg class="ic"><use href="#i-arrow"/></svg></span></span></span>
         </a>
         <a class="cat cat-d" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="catalogo_reposicoes">
           <span class="art-boxes" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="cat-d-text"><span class="cat-label">04 / 04</span><span class="cat-name">REPOSIÇÕES</span></span>
+          <span class="cat-d-text"><span class="cat-name">REPOSIÇÕES</span></span>
           <span class="cat-go"><span class="cat-go-t">Ver no app</span><span class="cat-go-ic"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
         </a>
       </div>
@@ -128,7 +124,7 @@
           <p><svg class="col-ic" aria-hidden="true"><use href="#i-eye"/></svg><span>Explore as opções disponíveis.</span></p>
         </div>
         <div class="col">
-          <h3>ESCOLHA</h3>
+          <h3><span class="ringed">ESCOLHA<svg aria-hidden="true"><use href="#h-ring"/></svg></span></h3>
           <p><svg class="col-ic" aria-hidden="true"><use href="#i-pick"/></svg><span>Identifique o que faz sentido para sua compra.</span></p>
         </div>
         <div class="col">
@@ -151,7 +147,6 @@
   <section class="app" id="aplicativo">
     <div class="wrap app-grid">
       <div class="app-copy">
-        <p class="kicker">Aplicativo</p>
         <h2>O catálogo acompanha você.</h2>
         <p class="app-text">Acesse pelo celular e consulte as opções disponíveis.</p>
         <a class="btn btn-dark btn-lg app-btn" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="aplicativo">VER NO APP <svg class="ic"><use href="#i-arrow"/></svg></a>
@@ -175,7 +170,13 @@
   <!-- SEÇÃO 05 -->
   <section class="journey" id="como-funciona">
     <div class="wrap journey-grid">
-      <h2 class="journey-title">Abra.<br>Veja.<br><em>Escolha.</em></h2>
+      <div class="journey-side">
+        <h2 class="journey-title">Abra.<br>Veja.<br><em>Escolha.</em></h2>
+        <figure class="snap" aria-hidden="true">
+          <img src="assets/quadro.jpg" alt="" width="405" height="720" loading="lazy" decoding="async">
+          <figcaption class="pencil">da campanha “Comprar em atacado”</figcaption>
+        </figure>
+      </div>
       <ol class="path">
         <li><b>ABRA</b><span>Acesso pelo celular.</span></li>
         <li><b>EXPLORE</b><span>Explore as opções disponíveis.</span></li>
