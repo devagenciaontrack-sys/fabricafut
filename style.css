@@ -347,3 +347,14 @@ body::after{ content:""; position:fixed; inset:0; z-index:200; pointer-events:no
 .snap img{ width:100%; height:auto; aspect-ratio:4 / 5; object-fit:cover; object-position:center 30%; }
 .snap figcaption{ padding:8px 2px 12px; font-size:20px; color:var(--coal); text-align:center; }
 @media (max-width:959px){ .snap{ width:180px; align-self:flex-end; margin-top:-80px; } }
+
+/* revisão: etiqueta do topo como anotação a lápis; cartões sem levantar */
+.hero .eyebrow.pencil{ font-family:var(--hand); font-weight:600; font-size:26px; letter-spacing:0; text-transform:none; color:var(--blue); transform:rotate(-2deg); transform-origin:left center; }
+.hero .eyebrow.pencil::before{ display:none; }
+.cat:hover{ transform:none; box-shadow:none; }
+
+
+/* ---------- revisão: regras de interface (toque, âncoras, foco) ---------- */
+html{ touch-action:manipulation; -webkit-tap-highlight-color:rgba(240,90,40,.18); }
+main [id]{ scroll-margin-top:84px; }
+@media (max-width:959px){ html{ scroll-padding-bottom:96px; } }
