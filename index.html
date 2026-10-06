@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Manrope:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -52,49 +52,30 @@
 
 <main id="conteudo">
 
-  <!-- HERO: capa de catálogo — título atravessando a página e uma grade com linhas finas -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
-      <div class="cover-head">
+    <div class="wrap hero-grid">
+      <div class="hero-head">
         <p class="eyebrow pencil">atacado no seu celular</p>
         <h1>Comprar em atacado pode ser muito mais simples.</h1>
       </div>
 
-      <div class="cover-grid">
-        <div class="cover-text">
-          <p class="lead">Conheça as opções disponíveis, organize sua compra e tenha o catálogo sempre por perto.</p>
-          <a class="btn btn-orange btn-lg" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="hero">VER O ATACADO NO APP</a>
-          <p class="micro">Acesso pelo celular.</p>
-          <nav class="toc" aria-label="Categorias do catálogo">
-            <p class="toc-title">No catálogo</p>
-            <a href="#catalogo">Novidades</a>
-            <a href="#catalogo">Modelos disponíveis</a>
-            <a href="#catalogo">Oportunidades</a>
-            <a href="#catalogo">Reposições</a>
-          </nav>
-          <p class="pencil cover-note" aria-hidden="true">dá o play<svg><use href="#h-arrow"/></svg></p>
+      <figure class="hero-video">
+        <span class="sticker" aria-hidden="true">Campanha</span>
+        <div class="video" data-video-id="NsGeB67Gk3M" data-track-play="fabrica_video_play">
+          <button type="button" class="video-poster" aria-label="Assistir ao vídeo: Comprar em atacado">
+            <img src="assets/video-capa.jpg" alt="" width="720" height="1280" decoding="async" fetchpriority="high">
+            <span class="play" aria-hidden="true">Assistir</span>
+          </button>
         </div>
+        <figcaption><span>Vídeo</span>Comprar em atacado</figcaption>
+        <p class="pencil hero-note" aria-hidden="true">dá o play<svg><use href="#h-arrow"/></svg></p>
+      </figure>
 
-        <figure class="cover-video">
-          <span class="sticker" aria-hidden="true">Campanha</span>
-          <div class="video" data-video-id="NsGeB67Gk3M" data-track-play="fabrica_video_play">
-            <button type="button" class="video-poster" aria-label="Assistir ao vídeo: Comprar em atacado">
-              <img src="assets/video-capa.jpg" alt="" width="720" height="1280" decoding="async" fetchpriority="high">
-              <span class="play" aria-hidden="true">Assistir</span>
-            </button>
-          </div>
-          <figcaption>Vídeo da campanha “Comprar em atacado”.</figcaption>
-        </figure>
-
-        <div class="cover-shelf">
-          <a class="plate" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="hero_vitrine" aria-label="Ver a vitrine no app">
-            <img src="assets/produto-3.jpg" alt="" width="320" height="300" decoding="async">
-          </a>
-          <a class="plate" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="hero_vitrine" aria-label="Ver a vitrine no app">
-            <img src="assets/produto-4.jpg" alt="" width="320" height="276" decoding="async">
-          </a>
-          <p class="shelf-caption">Na vitrine do app.</p>
-        </div>
+      <div class="hero-body">
+        <p class="lead">Conheça as opções disponíveis, organize sua compra e tenha o catálogo sempre por perto.</p>
+        <a class="btn btn-orange btn-lg" href="https://foxappy.com/link?store=atkfut" data-track="fabrica_app_click" data-location="hero">VER O ATACADO NO APP</a>
+        <p class="micro">Acesso pelo celular.</p>
       </div>
     </div>
   </section>
@@ -186,23 +167,22 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 05: a jornada como um ciclo — o último passo (volte quando precisar) leva de volta ao primeiro -->
+  <!-- SEÇÃO 05 -->
   <section class="journey" id="como-funciona">
     <div class="wrap journey-grid">
-      <h2 class="journey-title">Abra.<br>Veja.<br>Escolha.</h2>
-      <div class="cycle">
-        <svg class="cycle-ring" viewBox="0 0 400 400" aria-hidden="true">
-          <circle cx="200" cy="200" r="170"/>
-          <g class="cycle-arrows"><path d="M189 20 207 30 189 40Z" transform="rotate(45 200 200)"/><path d="M189 20 207 30 189 40Z" transform="rotate(135 200 200)"/><path d="M189 20 207 30 189 40Z" transform="rotate(225 200 200)"/><path d="M189 20 207 30 189 40Z" transform="rotate(315 200 200)"/></g>
-        </svg>
-        <img class="cycle-photo" src="assets/quadro.jpg" alt="" width="405" height="720" loading="lazy" decoding="async">
-        <ol class="cycle-steps" aria-label="Jornada">
-          <li class="st-top"><b>Abra</b><span>Acesso pelo celular.</span></li>
-          <li class="st-right"><b>Explore</b><span>Explore as opções disponíveis.</span></li>
-          <li class="st-bottom"><b>Escolha</b><span>Identifique o que faz sentido para sua compra.</span></li>
-          <li class="st-left"><b>Volte quando precisar</b><span>Consulte novidades pelo celular.</span></li>
-        </ol>
+      <div class="journey-side">
+        <h2 class="journey-title">Abra.<br>Veja.<br>Escolha.</h2>
+        <figure class="snap" aria-hidden="true">
+          <img src="assets/quadro.jpg" alt="" width="405" height="720" loading="lazy" decoding="async">
+          <figcaption class="pencil">da campanha “Comprar em atacado”</figcaption>
+        </figure>
       </div>
+      <ol class="path">
+        <li><b>ABRA</b><span>Acesso pelo celular.</span></li>
+        <li><b>EXPLORE</b><span>Explore as opções disponíveis.</span></li>
+        <li><b>ESCOLHA</b><span>Identifique o que faz sentido para sua compra.</span></li>
+        <li><b>VOLTE QUANDO PRECISAR</b><span>Consulte novidades pelo celular.</span></li>
+      </ol>
     </div>
   </section>
 
