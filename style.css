@@ -138,15 +138,15 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 @media (max-width:759px){ .cat-a{ min-height:340px; } .art-stack{ top:12%; right:10%; width:42%; } }
 
 /* Modelos disponíveis: cartela de amostras */
-.art-swatch{ position:absolute; z-index:-1; right:24px; top:22px; display:grid; grid-template-columns:repeat(3, 32px); gap:7px; transform:rotate(-6deg); transition:transform .4s; }
-.art-swatch i{ height:44px; border-radius:8px; border:1px solid rgba(36,39,43,.15); }
-.art-swatch i:nth-child(1){ background:var(--coal); }
-.art-swatch i:nth-child(2){ background:var(--orange); }
-.art-swatch i:nth-child(3){ background:var(--blue); }
-.art-swatch i:nth-child(4){ background:var(--white); }
-.art-swatch i:nth-child(5){ background:repeating-linear-gradient(90deg, var(--coal) 0 5px, var(--white) 5px 10px); }
-.art-swatch i:nth-child(6){ background:repeating-linear-gradient(0deg, var(--orange) 0 5px, var(--paper) 5px 10px); }
-.cat-b:hover .art-swatch{ transform:rotate(0deg); }
+.art-rack{ position:absolute; z-index:-1; right:16px; top:12px; width:min(74%, 380px); height:auto; overflow:visible; }
+.art-rack .rod{ fill:none; stroke:var(--coal); stroke-width:3; stroke-linecap:round; }
+.art-rack .hanger{ fill:none; stroke:var(--coal); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.art-rack .kit-line{ fill:none; stroke:var(--coal); stroke-width:1.8; stroke-linejoin:round; }
+.art-rack .f-w{ fill:var(--white); } .art-rack .f-o{ fill:var(--orange); } .art-rack .f-c{ fill:var(--coal); } .art-rack .f-b{ fill:var(--blue); }
+.art-rack .s-c{ fill:none; stroke:var(--coal); stroke-linecap:round; }
+.art-rack .kit{ transform-box:view-box; transition:transform .7s cubic-bezier(.3,1.6,.5,1); }
+.cat-b:hover .art-rack .kit:nth-of-type(odd){ transform:rotate(4deg); }
+.cat-b:hover .art-rack .kit:nth-of-type(even){ transform:rotate(-4deg); }
 
 /* Oportunidades: etiqueta */
 .art-tag{ position:absolute; z-index:-1; right:-22px; top:30px; width:170px; height:92px; border-radius:12px; clip-path:polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%); background:rgba(250,248,243,.1); transform:rotate(-16deg); transition:transform .4s; }
@@ -155,13 +155,31 @@ h2{ font-weight:800; font-size:clamp(32px, 5.2vw, 56px); line-height:1.02; lette
 .cat-c:hover .art-tag{ transform:rotate(-8deg) translateX(-8px); }
 
 /* Reposições: caixas empilhadas */
-.art-boxes{ position:relative; flex:none; width:64px; height:54px; }
-.art-boxes i{ position:absolute; width:30px; height:24px; border-radius:5px; border:1.5px solid rgba(255,255,255,.75); background:rgba(255,255,255,.1); transition:transform .35s; }
-.art-boxes i:nth-child(1){ left:0; bottom:0; }
-.art-boxes i:nth-child(2){ left:33px; bottom:0; }
-.art-boxes i:nth-child(3){ left:16px; bottom:28px; background:var(--white); }
-.cat-d:hover .art-boxes i:nth-child(3){ transform:translateY(-5px); }
-@media (max-width:520px){ .art-boxes{ display:none; } }
+.art-boxes{ flex:none; width:92px; height:auto; overflow:visible; }
+.art-boxes .box{ fill:rgba(255,255,255,.12); stroke:var(--white); stroke-width:2; }
+.art-boxes .lid{ fill:none; stroke:var(--white); stroke-width:2; }
+.art-boxes .tape{ fill:rgba(255,255,255,.6); }
+.art-boxes .bx-top .box{ fill:var(--white); }
+.art-boxes .bx-top .lid{ stroke:var(--blue); }
+.art-boxes .bx-top .tape{ fill:var(--blue); }
+.art-boxes .bx-top{ transform-box:fill-box; transition:transform .35s; }
+.cat-d:hover .art-boxes .bx-top{ transform:translateY(-5px); }
+@media (max-width:520px){ .art-boxes{ width:56px; } }
+/* prateleira de caixinhas no meio da faixa (só em telas largas) */
+.shelf{ display:none; }
+@media (min-width:900px){
+  .cat-d-text{ margin-right:0; }
+  .shelf{ display:block; flex:1; max-width:360px; height:auto; margin-inline:auto; overflow:visible; }
+  .shelf .shelf-line{ fill:none; stroke:rgba(255,255,255,.45); stroke-width:2; stroke-dasharray:6 6; stroke-linecap:round; }
+  .shelf .box{ fill:rgba(255,255,255,.1); stroke:rgba(255,255,255,.7); stroke-width:2; }
+  .shelf .lid{ fill:none; stroke:rgba(255,255,255,.7); stroke-width:2; }
+  .shelf .tape{ fill:rgba(255,255,255,.45); }
+  .shelf .bx-new .box{ fill:var(--white); stroke:var(--white); }
+  .shelf .bx-new .lid{ stroke:var(--blue); }
+  .shelf .bx-new .tape{ fill:var(--blue); }
+  .shelf .bx-new{ transform-box:fill-box; transition:transform .45s cubic-bezier(.3,1.5,.5,1); }
+  .cat-d:hover .shelf .bx-new{ transform:translate(-6px, -6px) rotate(-6deg); }
+}
 
 /* 03 — os três verbos em tipografia grande, em escada (sem caixas nem linhas) */
 .consult{ background:var(--white); border-block:1px solid var(--line); }
